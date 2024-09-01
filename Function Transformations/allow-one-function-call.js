@@ -5,12 +5,12 @@ var once = function (fn) {
   return function (...args) {
     if (!called) {
       called = true;
-      result = fn (...args);
+      result = fn(...args);
       return result;
     }
     return undefined;
-  }
-}
+  };
+};
 
 let fn = (a, b, c) => a + b + c;
 let onceFn = once(fn);
